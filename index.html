@@ -466,9 +466,9 @@ function Hero({ dark }) {
               Programmer Analyst at Cognizant crafting enterprise-grade Java applications, cloud-native solutions on AWS, and training the next generation of developers.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#contact">
+              <a href="/GowthamResume.pdf" download="Gowtham_S_Resume.pdf">
                 <button className="glow-btn text-white font-semibold px-8 py-4 rounded-2xl text-sm">
-                  <span>Contact Me →</span>
+                  <span>⬇ Download Resume</span>
                 </button>
               </a>
               <a href="#projects">
@@ -498,18 +498,18 @@ function Hero({ dark }) {
               <div className="absolute inset-0 rounded-full border opacity-10 animate-spin" style={{borderColor:'#6366f1', animationDuration:'20s', animationDirection:'reverse', margin:'-32px'}}/>
               {/* Avatar circle */}
                 <div
-                    className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden"
-                    style={{
-                      border: "3px solid rgba(14,165,233,0.4)",
-                      boxShadow: "0 0 60px rgba(14,165,233,0.25)",
-                    }}
-                  >
-                    <img
-                      src="profile.jpg"   // make sure it's in public folder
-                      alt="Profile"
-                      className="w-full h-full object-cover"
-                    />
-              </div>
+                  className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden"
+                  style={{
+                    border: "3px solid rgba(14,165,233,0.4)",
+                    boxShadow: "0 0 60px rgba(14,165,233,0.25)",
+                  }}
+                >
+                  <img
+                    src="profile.jpg"   // make sure it's in public folder
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               {/* Floating badges */}
               {[
                 {label:'Spring Boot 🌱', top:'-10%', left:'-20%', delay:'0s'},
@@ -832,10 +832,10 @@ function Services({ dark }) {
             <div className="text-5xl mb-5">🎓</div>
             <h3 className="text-xl font-black mb-3" style={{color:'var(--text)'}}>Career Guidance</h3>
             <p className="text-sm leading-relaxed mb-6" style={{color:'var(--muted)'}}>
-              Specifically designed for college students stepping into the tech industry. I share real-world insights on how to navigate your early career, build the right skills, and land your first tech job with confidence.
+              Specifically designed for college students and freshers stepping into the tech industry. I share real-world insights on how to navigate your early career, build the right skills, and land your first tech job with confidence.
             </p>
             <ul className="space-y-2 mb-8">
-              {["Roadmap for  & Students","How to Crack Campus Placements","Building Projects That Stand Out","Tech Career Path Clarity"].map(f => (
+              {["Roadmap for Freshers & Students","How to Crack Campus Placements","Building Projects That Stand Out","Tech Career Path Clarity"].map(f => (
                 <li key={f} className="text-sm flex gap-2" style={{color:'var(--muted)'}}>
                   <span style={{color:'#6366f1'}}>✓</span> {f}
                 </li>
