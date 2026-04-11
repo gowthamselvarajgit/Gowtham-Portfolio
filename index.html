@@ -181,11 +181,12 @@ const NAV_LINKS = ["Home","About","Skills","Experience","Projects","Services","C
 const SKILLS = {
   "Languages": [
     { name:"Java", level:88, icon:"☕" },
+    { name:"Python", level:65, icon:"🐍" },
     { name:"SQL", level:80, icon:"🗄️" },
     { name:"Bash/Shell", level:72, icon:"🖥️" },
     { name:"HTML5 / CSS3", level:85, icon:"🎨" },
   ],
-  "Frameworks": [
+  "Frameworks & Frontend": [
     { name:"Spring Boot", level:85, icon:"🌱" },
     { name:"Spring Security", level:78, icon:"🔐" },
     { name:"React.js", level:70, icon:"⚛️" },
@@ -200,14 +201,24 @@ const SKILLS = {
     { name:"Terraform", level:70, icon:"🏗️" },
     { name:"Ansible", level:65, icon:"📡" },
   ],
-  "Monitoring": [
-    { name:"Prometheus", level:72, icon:"📊" },
-    { name:"Grafana", level:70, icon:"📈" },
+  "AI / ML (Learning)": [
+    { name:"NumPy & Pandas", level:55, icon:"🔢" },
+    { name:"Matplotlib / Seaborn", level:50, icon:"📊" },
+    { name:"Scikit-learn", level:48, icon:"🤖" },
+    { name:"TensorFlow / Keras", level:40, icon:"🧠" },
+    { name:"PyTorch", level:35, icon:"🔥" },
+    { name:"NLP (NLTK / spaCy)", level:38, icon:"💬" },
+    { name:"OpenCV", level:35, icon:"👁️" },
+    { name:"LangChain / LLM APIs", level:32, icon:"⛓️" },
+  ],
+  "Monitoring & Observability": [
+    { name:"Prometheus", level:72, icon:"📈" },
+    { name:"Grafana", level:70, icon:"📉" },
     { name:"Nagios / Zabbix", level:65, icon:"🔍" },
   ],
 };
 
-const TECH_TAGS = ["Java","Spring Boot","AWS","Docker","React","Kubernetes","Terraform","MySQL","Git","Linux","Jenkins","Ansible"];
+const TECH_TAGS = ["Java","Python","Spring Boot","React.js","AWS","Docker","Kubernetes","Terraform","MySQL","Git","Linux","Jenkins","Ansible","TensorFlow","Scikit-learn","LangChain"];
 
 const EXPERIENCE = [
   {
@@ -442,14 +453,14 @@ function Hero({ dark }) {
           {/* Text */}
           <div>
             <div className="section-tag mb-6">
-              <span>👋</span> Available for Freelance
+              <span>👋</span> Full Stack Developer · Open to Collaborations
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-none mb-4" style={{fontFamily:'Syne',color:'var(--text)'}}>
               Gowtham<br/>
               <span className="grad-text">Selvaraj</span>
             </h1>
             <h2 className="text-xl md:text-2xl font-semibold mb-6" style={{color:'var(--muted)'}}>
-              <TypeWriter words={["Java Developer 💻","Cloud Engineer ☁️","DevOps Enthusiast 🚀","Spring Boot Expert 🌱","Tech Mentor 🎓"]} />
+              <TypeWriter words={["Full Stack Developer 🖥️","Java & Spring Boot Expert 🌱","Cloud Engineer ☁️","AI / ML Enthusiast 🧠","Tech Mentor 🎓"]} />
             </h2>
             <p className="text-base leading-relaxed mb-10 max-w-lg" style={{color:'var(--muted)'}}>
               Programmer Analyst at Cognizant crafting enterprise-grade Java applications, cloud-native solutions on AWS, and training the next generation of developers.
@@ -457,7 +468,7 @@ function Hero({ dark }) {
             <div className="flex flex-wrap gap-4">
               <a href="#contact">
                 <button className="glow-btn text-white font-semibold px-8 py-4 rounded-2xl text-sm">
-                  <span>Hire Me →</span>
+                  <span>Contact Me →</span>
                 </button>
               </a>
               <a href="#projects">
@@ -486,19 +497,19 @@ function Hero({ dark }) {
               <div className="absolute inset-0 rounded-full border opacity-20 animate-spin" style={{borderColor:'#0ea5e9', animationDuration:'12s', margin:'-16px'}}/>
               <div className="absolute inset-0 rounded-full border opacity-10 animate-spin" style={{borderColor:'#6366f1', animationDuration:'20s', animationDirection:'reverse', margin:'-32px'}}/>
               {/* Avatar circle */}
-              <div
-  className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden"
-  style={{
-    border: "3px solid rgba(14,165,233,0.4)",
-    boxShadow: "0 0 60px rgba(14,165,233,0.25)",
-  }}
->
-  <img
-    src="profile.jpg"   // make sure it's in public folder
-    alt="Profile"
-    className="w-full h-full object-cover"
-  />
-</div>
+                <div
+                    className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden"
+                    style={{
+                      border: "3px solid rgba(14,165,233,0.4)",
+                      boxShadow: "0 0 60px rgba(14,165,233,0.25)",
+                    }}
+                  >
+                    <img
+                      src="profile.jpg"   // make sure it's in public folder
+                      alt="Profile"
+                      className="w-full h-full object-cover"
+                    />
+              </div>
               {/* Floating badges */}
               {[
                 {label:'Spring Boot 🌱', top:'-10%', left:'-20%', delay:'0s'},
@@ -539,8 +550,8 @@ function About({ dark }) {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="reveal-left">
             {/* Square grid visual */}
-            <div className="grid grid-cols-4 gap-2 mb-8">
-              {["☁️AWS","🌱Spring","🐳Docker","⚙️K8s","🔧Jenkins","🏗️Terraform","📡Ansible","💻Java","🗄️MySQL","📊Grafana","🔐Security","⚛️React"].map((t,i) => (
+            <div className="grid grid-cols-5 gap-2 mb-8">
+              {["☁️AWS","🌱Spring","🐳Docker","⚙️K8s","🔧Jenkins","🏗️Terraform","📡Ansible","💻Java","🐍Python","⚛️React","🗄️MySQL","📊Grafana","🔐Security","🧠TensorFlow","🤖Scikit","🔥PyTorch","💬NLP","⛓️LangChain","👁️OpenCV","🔢Pandas"].map((t,i) => (
                 <div key={i} className="aspect-square rounded-xl flex flex-col items-center justify-center text-center p-2 text-xs font-semibold transition-all duration-300 hover:scale-110 cursor-default"
                   style={{background:'var(--card)', border:'1px solid var(--border)', color:'var(--text)'}}>
                   <span className="text-xl mb-1">{t.slice(0,2)}</span>
@@ -551,10 +562,10 @@ function About({ dark }) {
           </div>
           <div className="reveal-right space-y-6">
             <p className="text-lg leading-relaxed" style={{color:'var(--muted)'}}>
-              Hey! I'm <strong style={{color:'#0ea5e9'}}>Gowtham Selvaraj</strong>, a Programmer Analyst Trainee at Cognizant, freshly graduated from Bannari Amman Institute of Technology with a B.E in Electronics & Instrumentation.
+              Hey! I'm <strong style={{color:'#0ea5e9'}}>Gowtham Selvaraj</strong>, a Full Stack Java Developer and Programmer Analyst Trainee at Cognizant, freshly graduated from Bannari Amman Institute of Technology with a B.E in Electronics & Instrumentation.
             </p>
             <p className="leading-relaxed" style={{color:'var(--muted)'}}>
-              I build enterprise Java applications, design AWS cloud architectures, and have a passion for DevOps automation. Beyond coding, I actively mentor college students and deliver hands-on training in cloud and DevOps tools.
+              I build end-to-end web applications with Spring Boot backends, React frontends, and AWS cloud deployments. I'm currently expanding into the world of Python, Machine Learning, and AI — working towards becoming proficient in the full AI/ML ecosystem. Beyond coding, I guide college students on career paths and deliver hands-on Java training.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               {[
@@ -615,7 +626,7 @@ function Skills({ dark }) {
         <div className="text-center mb-16 reveal">
           <div className="section-tag mx-auto mb-4">Tech Stack</div>
           <h2 className="text-4xl md:text-5xl font-black" style={{color:'var(--text)'}}>Skills & Expertise</h2>
-          <p className="mt-3 text-base" style={{color:'var(--muted)'}}>Technologies I work with daily</p>
+          <p className="mt-3 text-base" style={{color:'var(--muted)'}}>Technologies I work with · Currently levelling up in AI & ML</p>
         </div>
 
         {/* Orbs cloud */}
@@ -635,20 +646,28 @@ function Skills({ dark }) {
         {/* Skill bars */}
         <div className="grid md:grid-cols-2 gap-10">
           {Object.entries(SKILLS).map(([cat, items], ci) => (
-            <div key={cat} className="reveal p-8 rounded-3xl" style={{background:'var(--card)', border:'1px solid var(--border)'}}>
-              <h3 className="font-black text-lg mb-6 grad-text">{cat}</h3>
-              <div className="space-y-5">
+            <div key={cat} className={`reveal p-8 rounded-3xl ${cat.includes('AI') ? 'md:col-span-2' : ''}`}
+              style={{background:'var(--card)', border:`1px solid ${cat.includes('AI') ? 'rgba(245,158,11,0.25)' : 'var(--border)'}`}}>
+              <div className="flex items-center gap-3 mb-6">
+                <h3 className="font-black text-lg grad-text">{cat}</h3>
+                {cat.includes('AI') && (
+                  <span className="text-xs px-3 py-1 rounded-full font-bold" style={{background:'rgba(245,158,11,0.15)', color:'#f59e0b'}}>
+                    🚀 Currently Learning
+                  </span>
+                )}
+              </div>
+              <div className={`grid gap-5 ${cat.includes('AI') ? 'md:grid-cols-2' : ''}`}>
                 {items.map(({name,level,icon}) => (
                   <div key={name}>
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm font-semibold" style={{color:'var(--text)'}}>{icon} {name}</span>
-                      <span className="text-xs font-bold" style={{color:'#0ea5e9'}}>{level}%</span>
+                      <span className="text-xs font-bold" style={{color: cat.includes('AI') ? '#f59e0b' : '#0ea5e9'}}>{level}%</span>
                     </div>
                     <div className="rounded-full overflow-hidden" style={{height:'6px', background:'var(--bg3)'}}>
                       <div className="skill-fill rounded-full"
                         style={{
                           width: activated ? `${level}%` : '0%',
-                          background:`linear-gradient(90deg,${['#0ea5e9','#6366f1','#10b981','#f59e0b'][ci%4]},${['#6366f1','#10b981','#f59e0b','#0ea5e9'][ci%4]})`,
+                          background:`linear-gradient(90deg,${['#0ea5e9','#6366f1','#10b981','#f59e0b','#8b5cf6'][ci%5]},${['#6366f1','#10b981','#f59e0b','#ec4899','#0ea5e9'][ci%5]})`,
                         }}/>
                     </div>
                   </div>
@@ -776,21 +795,21 @@ function Services({ dark }) {
         <div className="text-center mb-16 reveal">
           <div className="section-tag mx-auto mb-4">Services</div>
           <h2 className="text-4xl md:text-5xl font-black" style={{color:'var(--text)'}}>What I Offer</h2>
-          <p className="mt-3" style={{color:'var(--muted)'}}>Freelancing · Mentorship · Training</p>
+          <p className="mt-3" style={{color:'var(--muted)'}}>Collaborations · Career Guidance · Java Training</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Freelancing */}
+          {/* Collaboration */}
           <div className="booking-card reveal p-8 rounded-3xl relative overflow-hidden"
             style={{background:'var(--card)', border:'1px solid rgba(14,165,233,0.2)'}}>
             <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-10"
               style={{background:'#0ea5e9'}}/>
-            <div className="text-5xl mb-5">🚀</div>
-            <h3 className="text-xl font-black mb-3" style={{color:'var(--text)'}}>Freelance Dev</h3>
+            <div className="text-5xl mb-5">🤝</div>
+            <h3 className="text-xl font-black mb-3" style={{color:'var(--text)'}}>Open to Collaboration</h3>
             <p className="text-sm leading-relaxed mb-6" style={{color:'var(--muted)'}}>
-              Need a web application built? I build scalable Spring Boot backends, RESTful APIs, React frontends, and AWS-hosted solutions tailored for your business.
+              As a Full Stack Developer, I enjoy teaming up on meaningful side projects in my personal time. Whether it's building a complete web application from backend APIs to React UI, integrating cloud services, or experimenting with AI features — I'm happy to collaborate on ideas that create real impact.
             </p>
             <ul className="space-y-2 mb-8">
-              {["Full-stack Java Web Apps","RESTful API Development","AWS Cloud Deployments","Database Design & Management"].map(f => (
+              {["Full Stack Web Apps (Java + React)","REST API & Cloud Integration","AI/ML Feature Integration","Open Source Contributions"].map(f => (
                 <li key={f} className="text-sm flex gap-2" style={{color:'var(--muted)'}}>
                   <span style={{color:'#0ea5e9'}}>✓</span> {f}
                 </li>
@@ -798,12 +817,12 @@ function Services({ dark }) {
             </ul>
             <a href="mailto:gowtham26.work@gmail.com">
               <button className="glow-btn w-full text-white font-semibold py-3 rounded-2xl text-sm">
-                <span>Hire Me Now →</span>
+                <span>Let's Connect →</span>
               </button>
             </a>
           </div>
 
-          {/* 1-on-1 Mentorship */}
+          {/* Career Guidance */}
           <div className="booking-card reveal p-8 rounded-3xl relative overflow-hidden"
             style={{background:'linear-gradient(135deg,rgba(99,102,241,0.08),rgba(14,165,233,0.05))', border:'2px solid rgba(99,102,241,0.3)'}}>
             <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-10"
@@ -811,43 +830,43 @@ function Services({ dark }) {
             <div className="px-3 py-1 rounded-full text-xs font-bold text-center mb-3 w-fit"
               style={{background:'rgba(99,102,241,0.15)', color:'#6366f1'}}>⭐ Most Popular</div>
             <div className="text-5xl mb-5">🎓</div>
-            <h3 className="text-xl font-black mb-3" style={{color:'var(--text)'}}>1-on-1 Mentorship</h3>
+            <h3 className="text-xl font-black mb-3" style={{color:'var(--text)'}}>Career Guidance</h3>
             <p className="text-sm leading-relaxed mb-6" style={{color:'var(--muted)'}}>
-              Personalized sessions covering Java, Spring Boot, DevOps, Cloud & more. Tailored for college students and early-career developers who want structured guidance.
+              Specifically designed for college students stepping into the tech industry. I share real-world insights on how to navigate your early career, build the right skills, and land your first tech job with confidence.
             </p>
             <ul className="space-y-2 mb-8">
-              {["Java & Spring Boot Deep Dive","DevOps Tools Hands-on","AWS Cloud Fundamentals","Resume & Career Guidance"].map(f => (
+              {["Roadmap for  & Students","How to Crack Campus Placements","Building Projects That Stand Out","Tech Career Path Clarity"].map(f => (
                 <li key={f} className="text-sm flex gap-2" style={{color:'var(--muted)'}}>
                   <span style={{color:'#6366f1'}}>✓</span> {f}
                 </li>
               ))}
             </ul>
-            <a href="mailto:gowtham26.work@gmail.com?subject=Book%201-on-1%20Mentorship%20Session">
+            <a href="mailto:gowtham26.work@gmail.com?subject=Career%20Guidance%20Session%20Request">
               <button className="w-full font-semibold py-3 rounded-2xl text-sm transition-all hover:scale-105"
                 style={{background:'rgba(99,102,241,0.15)', border:'1px solid rgba(99,102,241,0.3)', color:'#6366f1'}}>
-                Book a Session 📅
+                Request a Session 📅
               </button>
             </a>
           </div>
 
-          {/* DevOps Training */}
+          {/* Java & Spring Boot Training */}
           <div className="booking-card reveal p-8 rounded-3xl relative overflow-hidden"
             style={{background:'var(--card)', border:'1px solid rgba(16,185,129,0.2)'}}>
             <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-10"
               style={{background:'#10b981'}}/>
-            <div className="text-5xl mb-5">⚙️</div>
-            <h3 className="text-xl font-black mb-3" style={{color:'var(--text)'}}>DevOps Training</h3>
+            <div className="text-5xl mb-5">☕</div>
+            <h3 className="text-xl font-black mb-3" style={{color:'var(--text)'}}>Java & Spring Boot Training</h3>
             <p className="text-sm leading-relaxed mb-6" style={{color:'var(--muted)'}}>
-              Structured bootcamp-style training for colleges and groups. Covering the full DevOps toolchain from Linux basics to Kubernetes and monitoring in production.
+              Structured, hands-on training sessions for college students and freshers who want to get job-ready with Java and Spring Boot. From core concepts to building real-world enterprise applications.
             </p>
             <ul className="space-y-2 mb-8">
-              {["Linux & Shell Scripting","Docker & Kubernetes","CI/CD with Jenkins","Monitoring: Prometheus & Grafana"].map(f => (
+              {["Core Java & OOP Concepts","Spring Boot from Scratch","Building RESTful APIs","Spring Data JPA & MySQL"].map(f => (
                 <li key={f} className="text-sm flex gap-2" style={{color:'var(--muted)'}}>
                   <span style={{color:'#10b981'}}>✓</span> {f}
                 </li>
               ))}
             </ul>
-            <a href="mailto:gowtham26.work@gmail.com?subject=DevOps%20Training%20Enquiry">
+            <a href="mailto:gowtham26.work@gmail.com?subject=Java%20%26%20Spring%20Boot%20Training%20Enquiry">
               <button className="w-full font-semibold py-3 rounded-2xl text-sm transition-all hover:scale-105"
                 style={{background:'rgba(16,185,129,0.1)', border:'1px solid rgba(16,185,129,0.3)', color:'#10b981'}}>
                 Enquire Now →
@@ -905,7 +924,7 @@ function Contact({ dark }) {
               <div className="text-2xl mb-2">🌟</div>
               <h4 className="font-black mb-2" style={{color:'var(--text)'}}>Open to Opportunities</h4>
               <p className="text-sm" style={{color:'var(--muted)'}}>
-                Freelance projects · Full-time roles · Mentorship · DevOps training for colleges
+                Full stack collaborations · Career guidance for freshers · Java & Spring Boot training · AI/ML projects
               </p>
             </div>
           </div>
